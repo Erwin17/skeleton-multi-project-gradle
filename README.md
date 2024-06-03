@@ -61,3 +61,11 @@ java -jar microservices/product-service/build/libs/*.jar &
 java -jar microservices/recommendation-service/build/libs/*.jar &
 java -jar microservices/review-service/build/libs/*.jar &
 ```
+8. Consumir servicio
+```
+curl http://localhost:7000/product-composite/1
+```
+
+```
+curl http://localhost:7000/product-composite/1 -s | jq .
+```
