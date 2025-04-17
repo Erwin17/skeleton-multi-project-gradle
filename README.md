@@ -53,8 +53,15 @@ implementation project (':api')
 ...
 }
 ```
+7. Construir los microservicios por separado
+```
+cd microservices/product-composite-service; ./gradlew build; cd -; \
+cd microservices/product-service;           ./gradlew build; cd -; \
+cd microservices/recommendation-service;    ./gradlew build; cd -; \
+cd microservices/review-service;            ./gradlew build; cd -; 
+```
 
-7. ejecutar todos los microservicios:
+8. ejecutar todos los microservicios:
 ```
 java -jar microservices/product-composite-service/build/libs/*.jar &
 java -jar microservices/product-service/build/libs/*.jar &
